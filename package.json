@@ -18,7 +18,10 @@
     "babel-preset-react": "^6.24.1",
     "express": "^4.14.1",
     "react": "^15.6.1",
+    "react-bootstrap-typeahead": "^2.0.0-alpha.3",
     "react-dom": "^15.6.1",
+    "react-typeahead": "^2.0.0-alpha.5",
+    "typeahead": "^0.2.2",
     "webpack": "^3.4.1",
     "webpack-dev-middleware": "^1.10.0"
   }

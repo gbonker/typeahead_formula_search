@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
- 
-/**
- * A counter button: tap the button to increase the count.
- */
+//import Typeahead from 'react-typeahead';
+var Typeahead = require('react-bootstrap-typeahead').Typeahead;
+
+const functions = ['avg', 'count', 'max', 'min', 'sum'];
+
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +13,10 @@ class SearchBar extends Component {
  
   render() {
     return (
-      <input />
+      <Typeahead
+  	    onChange={this._handleChange}
+        options={functions}
+  	  />
     );
   }
 }
