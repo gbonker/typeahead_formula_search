@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-//import Typeahead from 'react-typeahead';
 var Typeahead = require('react-bootstrap-typeahead').Typeahead;
 
-const functions = ['avg', 'count', 'max', 'min', 'sum'];
+const functions = ['avg({predicate}, {field})', 'count({predicate})', 'max({predicate}, {field})', 'min({predicate}, {field})', 'sum({predicate}, {field})'];
 const comparators = ['>', '<', '>=', '<=', '==', 'NOT'];
 const fields = ['@revenue', '@quantity', '@created_at'];
 
@@ -39,13 +38,14 @@ class SearchBar extends Component {
 
   render() {
     return (
+      <div className="search-bar">
       <Typeahead
         allowNew
-  	    onChange={this._handleChange}
         options={functions}
         bsSize="large"
         placeholder="Search for a formula..."
   	  />
+      </div>
     );
   }
 }

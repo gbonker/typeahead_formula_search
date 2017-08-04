@@ -5,7 +5,52 @@
   <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/48938155eb24b4ccdde09426066869504c6dab3c/dist/css/bootstrap.min.css">
 </head>
 <body>
-  <div class="container"></div>
+  <div class="container">
+  	<div class="row">
+      <div class="col-sm-6 col-sm-push-6" id="app">
+      </div>
+      <div class="col-sm-6 col-sm-pull-6" id="main-heading">
+        <h1>Search for a Function</h1>
+        <p>Use the search bar to find a function to execute.</p>
+        <h2>Functions</h2>
+        <p>Functions always take in a predicate, and some take in a field as well.</p>
+        <h3>avg<span class="text-muted">({predicate}, {field})</span></h3>
+        <p>The <code>avg</code> function takes in a predicate and a field. It finds the average of the field, taking into consideration the predicate query.</p>
+        <h3>count<span class="text-muted">({predicate})</span></h3>
+        <p>The <code>count</code> function takes in a predicate and counts the number of records that satisfy the predicate's condition.</p>
+        <h3>max<span class="text-muted">({predicate}, {field})</span></h3>
+        <p>The <code>max</code> function takes in a predicate and a field. It finds the maximum value of the field, taking into consideration the predicate query.</p>
+        <h3>min<span class="text-muted">({predicate}, {field})</span></h3>
+        <p>The <code>min</code> function takes in a predicate and a field. It finds the minimum value of the field, taking into consideration the predicate query.</p>
+        <h3>sum<span class="text-muted">({predicate}, {field})</span></h3>
+        <p>The <code>sum</code> function takes in a predicate and a field. It finds the sum of all the values of the field, taking into consideration the predicate query.</p>
+        <h2>Fields</h2>
+        <p>Fields are always prefixed with an "@" symbol.</p>
+        <h3>@revenue</h3>
+        <p>The <code>@revenue</code> field finds the total revenue for a given predicate.</p>
+        <h3>@quantity</h3>
+        <p>The <code>@quantity</code> field finds the total quantity for a given predicate. Quantities should be entered as integers.</p>
+        <h3>@created_at</h3>
+        <p>The <code>@created_at</code> field finds the records that were created at, before or after a certain date. Dates should be entered in the form of strings in the following format: <code>"2016-06-01"</code></p>
+        <h2>Comparators</h2>
+        <h3>></h3>
+        <p>Greater than</p>
+        <h3><</h3>
+        <p>Less than</p>
+        <h3>>=</h3>
+        <p>Greater than or equal to</p>
+        <h3><=</h3>
+        <p>Less than or equal to</p>
+        <h3>==</h3>
+        <p>Equal to</p>
+        <h2>Example Functions</h2>
+        <p><code>sum(@quantity > 1000, @revenue)</code></p>
+        <p>Sum the field revenue for all entries where the field quantity is greater than 1000.</p>
+        <p><code>count(@created_at > "2016-06-01")</code></p> 
+        <p>Count the entries that were created after June 1, 2016.</p>
+      </div>
+    </div>
+  </div>
   <script src="/bundle.js" ></script> 
 </body>
 </html>
