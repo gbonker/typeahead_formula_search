@@ -1,0 +1,13 @@
+.search-bar {
+	margin-top: 30px;
+}
+
+@media only screen and (min-width: 544px) {
+  .search-bar {
+    position: fixed;
+  }
+}
+
+#main-heading {
+  margin-top: 30px;
+}

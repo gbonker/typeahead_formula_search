@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import {Typeahead} from 'react-bootstrap-typeahead';
 
 import SearchBar from './components/search_bar';
  
@@ -8,18 +9,15 @@ class App extends Component {
     super(props);
 
     this.state = { 
-      formulas: [],
-      selectedFormula: null 
+      formula: '' 
     };
   }
 
   render() {
     return (
-      <div>
-        <SearchBar />
-      </div>
+      <SearchBar />
     );
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(<App />, document.querySelector('#app'));
